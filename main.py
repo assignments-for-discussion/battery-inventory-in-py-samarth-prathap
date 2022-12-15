@@ -36,7 +36,7 @@ def test_bucketing_by_number_of_cycles():
   assert(counts["mediumCount"] == 2)
   assert(counts["highCount"] == 2)
   print("Done counting :)")
- # a custom to take input from the user
+ # a custom function to take input from the user
 def take_inputs():
   n=int(input("Enter the number of batteries you want check efficiency cycle "))
   cycles=[]
