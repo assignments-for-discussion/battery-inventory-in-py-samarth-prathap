@@ -1,9 +1,24 @@
 
 def count_batteries_by_usage(cycles):
-  return {
-    "lowCount": 0,
-    "mediumCount": 0,
-    "highCount": 0
+    # counters to keep track
+    lowCount=0
+    mediumCount=0
+    highCount=0
+    # loop the list
+    for cycle in cycles:
+    # condition to group them based of the cycles 
+        if(cycle<310):
+          lowCount+=1
+        elif(cycle>=310 and cycle<929):
+          mediumCount+=1
+        else:
+          highCount+=1
+  
+    # returning the count of batteries.
+    return {
+    "lowCount": lowCount,
+    "mediumCount": mediumCount,
+    "highCount": highCount
   }
 
 
@@ -15,6 +30,6 @@ def test_bucketing_by_number_of_cycles():
   assert(counts["highCount"] == 1)
   print("Done counting :)")
 
-
-if __name__ == '__main__':
+    
+if _name_ == '_main_':
   test_bucketing_by_number_of_cycles()
